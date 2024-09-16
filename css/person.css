@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background-color: #222222;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.character_card {
+    width: 500px;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.character-card img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+.character_card h2 {
+    color: #000;
+    margin: 0 0 10px;
+}
+.character-card p {
+    margin: 0;
+}
