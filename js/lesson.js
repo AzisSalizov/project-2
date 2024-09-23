@@ -78,3 +78,43 @@ const converter = (elem, targetElem1, targetElem2) => {
 converter(somInput, usdInput, eurInput);
 converter(usdInput, somInput, eurInput);
 converter(eurInput, somInput, usdInput);
+
+//CARD SWITCHER
+
+const card = document.querySelector('.card');
+const btnNext = document.querySelector('#btn-next');
+const btnPrev = document.querySelector('#btn-prev');
+let cardId = 1;
+
+const fetchTodo = id => {
+    fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        .then(res => res.json())
+        .then(data => {
+            card.innerHTML = `
+             <p>${data.title}</p>
+             <p style="color: ${data.completed ? 'green' : 'red'}">${data.completed}</p>
+             <span>${data.id}</span>
+            `;
+        })
+}
+fetchTodo(cardId)
+
+btnNext.onclick = () => {
+    cardId++;
+    if (cardId > 200) {
+        cardId = 1;
+    }
+    fetchTodo(cardId);
+};
+
+btnPrev.onclick = () => {
+    cardId--;
+    if (cardId < 1) {
+        cardId = 200;
+    }
+    fetchTodo(cardId);
+};
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(res => res.json())
+    .then(data => console.log(data))
