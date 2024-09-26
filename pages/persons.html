@@ -1,22 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Java Script</title>
     <link rel="stylesheet" href="../css/core.css">
     <link rel="stylesheet" href="../css/person.css">
-    <title>Persons</title>
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
 <body>
 
-<div class="container" id="character_container">
+<div class="wrapper">
+    <div class="header">
+        <div class="container">
+            <div class="inner_header">
+                <a href="../index.html">
+                    <div class="logotype">
+                        <h2>JavaScript</h2>
+                    </div>
+                </a>
+                <ul class="menu">
+                    <li class="menu_link">
+                        <a href="../pages/home_works.html">Home Works</a>
+                    </li>
+                    <li class="menu_link">
+                        <a href="../pages/persons.html">Persons</a>
+                    </li>
+                    <li class="menu_link">
+                        <a href="../pages/lessons.html">Lessons</a>
+                    </li>
+                    <li class="menu_link">
+                        <a href="http://t.me/nurdinbuy16" target="_blank">Send message</a>
+                    </li>
+                </ul>
+                <button class="btn" id="btn-get">Click me!</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card_container" id="card_container">
+
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="container">
+            <a href="https://www.instagram.com/nurdinbuy/" target="_blank">
+                <div class="inner_footer">
+                    <h2>Made by NurDinBuy</h2>
+                </div>
+            </a>
+        </div>
+    </div>
 </div>
 
+<div class="modal">
+    <div class="modal_dialog">
+        <div class="modal_content">
+            <form action="#">
+                <div class="modal_close">&times;</div>
+                <div class="modal_title">Мы свяжемся с вами как можно быстрее!</div>
+                <input
+                        required
+                        placeholder="Ваше имя"
+                        name="name"
+                        type="text"
+                        class="modal_input"
+                >
+                <input
+                        required
+                        placeholder="Ваш номер телефона"
+                        name="phone"
+                        type="text"
+                        class="modal_input"
+                >
+                <button class="btn btn_dark btn_min">Перезвонить мне</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 </body>
 <script src="../js/person.js"></script>
-<!--<script src="../js/modal.js"></script>-->
+<script src="../js/modal.js"></script>
 </html>
