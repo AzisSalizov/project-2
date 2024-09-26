@@ -88,13 +88,17 @@ const btnPrev = document.querySelector('#btn-prev');
 let cardId = 1;
 
 const fetchTodo = async id => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
-    const data = await res.json();
-    card.innerHTML = `
+    try {
+        const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        const data = await res.json();
+        card.innerHTML = `
              <p>${data.title}</p>
              <p style="color: ${data.completed ? 'green' : 'red'}">${data.completed}</p>
              <span>${data.id}</span>
             `;
+    } catch (e) {
+        console.log(e)
+    }
 }
 fetchTodo(cardId)
 
